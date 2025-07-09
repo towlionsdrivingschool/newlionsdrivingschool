@@ -6,7 +6,7 @@ import tailwind from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
 export default defineConfig({
-  base: "https://towlionsdrivingschool.github.io", // 👈 Add this line for GitHub Pages
+  base: "newlionsdrivingschool", // 👈 Add this line for GitHub Pages
   css: {
     postcss: {
       plugins: [tailwind(), autoprefixer()],
