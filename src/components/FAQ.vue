@@ -74,7 +74,7 @@ const FAQList: FAQProps[] = [
       </AccordionItem>
     </Accordion>
 
-    <h3 class="font-medium mt-4">
+    <!-- <h3 class="font-medium mt-4">
       Still have questions?
       <a
         href="#"
@@ -86,6 +86,6 @@ const FAQList: FAQProps[] = [
           >Contact us</a
         >
       </a>
-    </h3>
+    </h3> -->
   </section>
 </template>

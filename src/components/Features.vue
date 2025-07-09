@@ -10,7 +10,12 @@ import {
   PictureInPicture,
   MousePointerClick,
   Newspaper,
+  CalendarCheck2,
+  HandCoins,
+  Check,
+
 } from "lucide-vue-next";
+
 
 interface FeaturesProps {
   icon: string;
@@ -20,40 +25,40 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "tabletSmartphone",
-    title: "Mobile Friendly",
+    icon: "check",
+    title: "Safety First",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "We prioritize safety in all our lessons, teaching you how to handle various driving situations responsibly.",
   },
   {
-    icon: "badgeCheck",
-    title: "Social Proof",
+    icon: "handCoins",
+    title: "Affordable Rates",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Quality driving instruction should be accessible to everyone, which is why we offer competitive pricing and package deals.",
   },
   {
-    icon: "goal",
-    title: "Targeted Content",
+    icon: "calendarCheck2",
+    title: "Flexible Scheduling",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "We offer a variety of lesson times to fit your busy schedule, including evenings and weekends.",
   },
   {
     icon: "pictureInPicture",
-    title: "Strong Visuals",
+    title: "Professional Instructors",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "we take pride in our team of professional instructors who are dedicated to providing the highest quality driver education. Our instructors are.",
   },
   {
     icon: "mousePointerClick",
-    title: "Clear CTA",
+    title: "Pick And Drop At Your Doorstep",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "Our instructors pick you up and drop you off, fitting lessons into your busy schedule for maximum convenience.",
   },
   {
     icon: "newspaper",
-    title: "Clear Headline",
+    title: "8 and H Test Practice",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "Prepare for the essential 8 and H driving tests with our specialized training sessions. Our practice sessions will help you master the skills and techniques needed to pass confidently and successfully.",
   },
 ];
 
@@ -67,6 +72,8 @@ const iconMap: Record<
   | typeof MousePointerClick
   | typeof MessageCircle
   | typeof Newspaper
+  | typeof Check
+  | typeof CalendarCheck2
 > = {
   tabletSmartphone: TabletSmartphone,
   badgeCheck: BadgeCheck,
@@ -76,42 +83,34 @@ const iconMap: Record<
   mousePointerClick: MousePointerClick,
   messageCircle: MessageCircle,
   newspaper: Newspaper,
+  check: Check,
+  handCoins: HandCoins,
+  calendarCheck2: CalendarCheck2,
 };
 </script>
 
 <template>
-  <section
-    id="features"
-    class="container py-24 sm:py-32"
-  >
+  <section id="features" class="container py-24 sm:py-32">
     <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
       Features
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      What Makes Us Different
+      Why Choose Us
     </h2>
 
-    <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
+    <!-- <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
       fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
       facere tenetur.
-    </h3>
+    </h3> -->
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div
-        v-for="{ icon, title, description } in featureList"
-        :key="title"
-      >
+      <div v-for="{ icon, title, description } in featureList" :key="title">
         <Card class="h-full bg-background border-0 shadow-none">
           <CardHeader class="flex justify-center items-center">
-            <div
-              class="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4"
-            >
-              <component
-                :is="iconMap[icon]"
-                class="size-6 text-primary"
-              />
+            <div class="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4">
+              <component :is="iconMap[icon]" class="size-6 text-primary" />
             </div>
 
             <CardTitle>
